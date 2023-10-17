@@ -12,11 +12,11 @@ const meta = {
 };
 
 export default function AllVisitors() {
-  // const isAuthenticated = useAuth();
+  const isAuthenticated = useAuth();
 
-  // if (!isAuthenticated) {
-  //   return <Navigate to={'/login'} />;
-  // }
+  if (!isAuthenticated) {
+    return <Navigate to={'/login'} />;
+  }
   return (
     <React.Fragment>
       <HelmetProvider>
@@ -76,13 +76,13 @@ export default function AllVisitors() {
                         fill='none'
                         xmlns='http://www.w3.org/2000/svg'
                       >
-                        <path
+                        {/* <path
                           d='M10.6668 1L6.00016 5.66667L1.3335 1'
                           stroke='#B8C1CC'
                           strokeWidth='1.5'
                           strokeLinecap='round'
                           strokeLinejoin='round'
-                        />
+                        /> */}
                       </svg>
                     </div>
                   </a>
